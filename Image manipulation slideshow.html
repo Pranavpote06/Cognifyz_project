@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Manipulation</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .gallery img {
+            width: 120px;
+            height: 80px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:active {
+            transform: scale(2.5);
+            z-index: 10;
+        }
+
+        .slideshow {
+            width: 300px;
+            height: 200px;
+            margin: 40px auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+
+        .slides {
+            display: flex;
+            width: 900px;
+            animation: slide 9s infinite;
+        }
+
+        .slides img {
+            width: 300px;
+            height: 200px;
+        }
+
+        @keyframes slide {
+            0%   { transform: translateX(0); }
+            33%  { transform: translateX(-300px); }
+            66%  { transform: translateX(-600px); }
+            100% { transform: translateX(0); }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Image Gallery</h2>
+    <p>Click on an image to enlarge</p>
+
+    <div class="gallery">
+        <img src="file:///C:/Users/prana/Downloads/1.png" alt="Image 1">
+        <img src="file:///C:/Users/prana/Downloads/2.png" alt="Image 2">
+        <img src="file:///C:/Users/prana/Downloads/3.png" alt="Image 3">
+    </div>
+
+    <h2>Automatic Image Slideshow</h2>
+
+    <div class="slideshow">
+        <div class="slides">
+            <img src="file:///C:/Users/prana/Downloads/1.png">
+            <img src="file:///C:/Users/prana/Downloads/2.png">
+            <img src="file:///C:/Users/prana/Downloads/3.png">
+        </div>
+    </div>
+
+</body>
+</html>
