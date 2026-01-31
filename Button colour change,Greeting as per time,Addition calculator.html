@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Level 1 Task 2 - JavaScript</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+            padding: 40px;
+        }
+
+        button {
+            padding: 12px 25px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            background-color: red;
+            margin: 10px;
+        }
+
+        input {
+            padding: 8px;
+            width: 150px;
+            margin: 5px;
+        }
+
+        #result {
+            margin-top: 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Level 1 – Task 2 (JavaScript)</h1>
+
+    <h3>1. Button Color Change (7 Colors)</h3>
+    <button id="colorBtn" onclick="changeColor()">Click Me</button>
+
+    <hr><br>
+
+    <h3>2. Greeting Alert Based on Time</h3>
+    <button onclick="showGreeting()">Show Greeting</button>
+
+    <hr><br>
+
+    <h3>3. Simple Calculator (Addition)</h3>
+    <input type="number" id="num1" placeholder="Number 1">
+    <input type="number" id="num2" placeholder="Number 2">
+    <br>
+    <button onclick="addNumbers()">Add</button>
+
+    <div id="result"></div>
+
+    <script>
+        const colors = [
+            "red",
+            "orange",
+            "yellow",
+            "green",
+            "blue",
+            "indigo",
+            "violet"
+        ];
+
+        let colorIndex = 0;
+
+        function changeColor() {
+            const btn = document.getElementById("colorBtn");
+            btn.style.backgroundColor = colors[colorIndex];
+            colorIndex = (colorIndex + 1) % colors.length;
+        }
+
+        function showGreeting() {
+            const hour = new Date().getHours();
+            let message;
+
+            if (hour < 12) {
+                message = "Good Morning!";
+            } else if (hour < 18) {
+                message = "Good Afternoon!";
+            } else {
+                message = "Good Night!";
+            }
+
+            alert(message);
+        }
+
+        function addNumbers() {
+            const n1 = document.getElementById("num1").value;
+            const n2 = document.getElementById("num2").value;
+
+            if (n1 === "" || n2 === "") {
+                document.getElementById("result").innerText =
+                    "Please enter both numbers.";
+                return;
+            }
+
+            const sum = Number(n1) + Number(n2);
+            document.getElementById("result").innerText =
+                "Result: " + sum;
+        }
+    </script>
+
+</body>
+</html>
