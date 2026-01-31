@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Developer Internship | Cognifyz</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #9da7d9;
+            color: #1f2933;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #ffffff;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header h2 {
+            margin: 0;
+            color: #3b3f92;
+        }
+
+        .hero {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #1f2933;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .section {
+            background-color: #ffffff;
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 900px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .section h3 {
+            color: #3b3f92;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        .cta {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .cta button {
+            background: linear-gradient(90deg, #3b3f92, #2c2f73);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .cta button:hover {
+            background: linear-gradient(90deg, #2c2f73, #3b3f92);
+            transform: scale(1.05);
+        }
+
+        .apply-form {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .apply-form h3 {
+            margin-bottom: 15px;
+            color: #3b3f92;
+            text-align: center;
+        }
+
+        .apply-form input,
+        .apply-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .apply-form button {
+            width: 100%;
+            background-color: #3b3f92;
+            color: white;
+            padding: 15px;
+            border: none;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .apply-form button:hover {
+            background-color: #2c2f73;
+        }
+
+        footer {
+            background-color: #1f2933;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            header, .hero, .section, .apply-form {
+                padding: 20px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .cta button {
+                width: 80%;
+                padding: 12px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h2>Cognifyz Technologies</h2>
+    </header>
+
+    <section class="hero">
+        <h1>Web Developer Internship Opportunities at Cognifyz Technologies</h1>
+        <p>
+            Join Cognifyz Technologies as a Web Developer Intern and gain hands-on
+            experience by working on real-world projects under expert guidance.
+            This internship is designed to enhance your technical skills and
+            prepare you for a successful career in web development.
+        </p>
+    </section>
+
+    <div class="section">
+        <h3>Internship Overview</h3>
+        <p>
+            The Web Developer Internship is a structured program of 1–3 months,
+            focusing on practical learning, real-time project development, and
+            industry-relevant technologies.
+        </p>
+    </div>
+
+    <div class="section">
+        <h3>Internship Highlights</h3>
+        <ul>
+            <li>Real-world project experience</li>
+            <li>One-on-one mentorship from industry experts</li>
+            <li>Skill enhancement and hands-on learning</li>
+            <li>Certificate of completion</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h3>Qualifications</h3>
+        <ul>
+            <li>Basic knowledge of HTML, CSS, and JavaScript</li>
+            <li>Understanding of responsive web design</li>
+            <li>Interest in web development and learning new technologies</li>
+            <li>Good problem-solving skills</li>
+        </ul>
+    </div>
+
+    <div class="apply-form">
+        <h3>Apply Now</h3>
+        <form action="mailto:info@cognifyz.com" method="POST" enctype="text/plain">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="text" name="phone" placeholder="Phone Number" required>
+            <textarea name="message" placeholder="Why do you want to join?" rows="5" required></textarea>
+            <button type="submit">Submit Application</button>
+        </form>
+        <p style="text-align:center;font-size:12px;color:#555;margin-top:10px;">
+            After submitting, check your email to confirm.
+        </p>
+    </div>
+
+    <footer>
+        <p>Contact Us: info@cognifyz.com</p>
+    </footer>
+
+</body>
+</html>
