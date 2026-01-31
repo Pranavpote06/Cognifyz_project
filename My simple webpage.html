@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My First Page</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 12px;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            display: none;
+            padding: 40px 20px;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        img {
+            width: 250px;
+            margin: 20px;
+        }
+
+        input[type="text"] {
+            padding: 8px;
+            width: 220px;
+        }
+
+        input[type="submit"] {
+            padding: 8px 16px;
+            background: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+
+    <script>
+        function showPage(pageId) {
+            let pages = document.querySelectorAll("section");
+            pages.forEach(page => page.classList.remove("active"));
+            document.getElementById(pageId).classList.add("active");
+        }
+    </script>
+</head>
+
+<body onload="showPage('home')">
+
+<nav>
+    <a onclick="showPage('home')">Home</a>
+    <a onclick="showPage('about')">About</a>
+    <a onclick="showPage('contact')">Contact</a>
+</nav>
+
+<section id="home" class="active">
+    <h1>Welcome to My First Page</h1>
+
+    <img src="file:///C:/Users/prana/Downloads/myfirstpage.jpg.jpg" alt="My First Page Image">
+
+    <form>
+        <input type="text" placeholder="Enter your name" required>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+</section>
+
+<section id="about">
+    <h1>About Page</h1>
+    <p>
+        This page provides information about the website
+        and demonstrates basic web page design.
+    </p>
+</section>
+
+<section id="contact">
+    <h1>Contact Page</h1>
+    <p>
+        Email: example@email.com <br><br>
+        Phone: +91 XXXXXXXXXX
+    </p>
+</section>
+
+</body>
+</html>
